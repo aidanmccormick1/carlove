@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Future Car Love Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <form id="quiz-form" novalidate>
+        <section class="question-screen active" data-screen="1" aria-labelledby="screen-title-1">
+          <div class="screen-shell">
+            <p class="eyebrow">AI Love Lab</p>
+            <h1 id="screen-title-1">Future Car Love Story</h1>
+            <p class="subhead">Swipe through this tiny game and we will find your exact used-car soulmate.</p>
+            <p class="step">Step 1 of 10</p>
+            <div class="field large">
+              <label for="budget">What budget feels safe?</label>
+              <input id="budget" name="budget" type="number" min="6000" max="55000" step="500" value="20000" required />
+            </div>
+            <div class="nav-row">
+              <span></span>
+              <button type="button" class="cta" data-next>Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="question-screen" data-screen="2" aria-labelledby="screen-title-2">
+          <div class="screen-shell">
+            <h2 id="screen-title-2">What body type are you flirting with?</h2>
+            <p class="step">Step 2 of 10</p>
+            <div class="field">
+              <label for="bodyStyle">Body style</label>
+              <select id="bodyStyle" name="bodyStyle">
+                <option value="any">Surprise me</option>
+                <option value="sedan">Sedan</option>
+                <option value="suv">SUV</option>
+                <option value="truck">Truck</option>
+                <option value="hatch">Hatchback</option>
+                <option value="coupe">Coupe vibes only</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="truckMood">Truck mood today</label>
+              <select id="truckMood" name="truckMood">
+                <option value="maybe">Maybe truck, maybe not</option>
+                <option value="yes">Yes truck, I mean business</option>
+                <option value="no">No truck, keep it smooth</option>
+              </select>
+            </div>
+            <div class="nav-row">
+              <button type="button" class="cta ghost" data-prev>Back</button>
+              <button type="button" class="cta" data-next>Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="question-screen" data-screen="3" aria-labelledby="screen-title-3">
+          <div class="screen-shell">
+            <h2 id="screen-title-3">How much do you actually drive?</h2>
+            <p class="step">Step 3 of 10</p>
+            <div class="field large">
+              <label for="weeklyMiles">Weekly driving miles</label>
+              <input id="weeklyMiles" name="weeklyMiles" type="range" min="20" max="500" value="140" />
+              <output id="weeklyMilesValue" for="weeklyMiles">140 miles</output>
+            </div>
+            <div class="field">
+              <label for="fuel">Fuel preference</label>
+              <select id="fuel" name="fuel">
+                <option value="any">Any</option>
+                <option value="gas">Gas</option>
+                <option value="hybrid">Hybrid</option>
+                <option value="ev">EV</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="chargeAccess">If EV, how is charging access?</label>
+              <select id="chargeAccess" name="chargeAccess">
+                <option value="none">No easy charging</option>
+                <option value="public">Public charging nearby</option>
+                <option value="home">Home charging access</option>
+              </select>
+            </div>
+            <div class="nav-row">
+              <button type="button" class="cta ghost" data-prev>Back</button>
+              <button type="button" class="cta" data-next>Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="question-screen" data-screen="4" aria-labelledby="screen-title-4">
+          <div class="screen-shell">
+            <h2 id="screen-title-4">Pick your must-haves</h2>
+            <p class="step">Step 4 of 10</p>
+            <fieldset class="field">
+              <legend>Tap all that matter</legend>
+              <div class="check-grid">
+                <label><input type="checkbox" name="needs" value="towing" /> Towing ability</label>
+                <label><input type="checkbox" name="needs" value="awd" /> AWD confidence</label>
+                <label><input type="checkbox" name="needs" value="lowMaint" /> Low maintenance</label>
+                <label><input type="checkbox" name="needs" value="fun" /> Fun drive</label>
+                <label><input type="checkbox" name="needs" value="cargo" /> Big cargo energy</label>
+                <label><input type="checkbox" name="needs" value="tech" /> Modern tech</label>
+              </div>
+            </fieldset>
+            <div class="nav-row">
+              <button type="button" class="cta ghost" data-prev>Back</button>
+              <button type="button" class="cta" data-next>Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="question-screen" data-screen="5" aria-labelledby="screen-title-5">
+          <div class="screen-shell">
+            <h2 id="screen-title-5">How much drama can this relationship handle?</h2>
+            <p class="step">Step 5 of 10</p>
+            <div class="field">
+              <label for="riskTolerance">Repair risk tolerance</label>
+              <select id="riskTolerance" name="riskTolerance">
+                <option value="low">Low (peace only)</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High (I can handle surprises)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="ownershipYears">How long will you keep it?</label>
+              <select id="ownershipYears" name="ownershipYears">
+                <option value="short">1-3 years</option>
+                <option value="medium" selected>4-6 years</option>
+                <option value="long">7+ years</option>
+              </select>
+            </div>
+            <div class="nav-row">
+              <button type="button" class="cta ghost" data-prev>Back</button>
+              <button type="button" class="cta" data-next>Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="question-screen" data-screen="6" aria-labelledby="screen-title-6">
+          <div class="screen-shell">
+            <h2 id="screen-title-6">What is your everyday environment?</h2>
+            <p class="step">Step 6 of 10</p>
+            <div class="field">
+              <label for="weather">Weather where you live</label>
+              <select id="weather" name="weather">
+                <option value="mild">Mostly mild</option>
+                <option value="snow">Snow / rough winter</option>
+                <option value="rain">Rainy and slippery</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="parking">Parking situation</label>
+              <select id="parking" name="parking">
+                <option value="easy">Easy parking</option>
+                <option value="tight">Tight city parking</option>
+                <option value="street">Mostly street parking</option>
+              </select>
+            </div>
+            <div class="nav-row">
+              <button type="button" class="cta ghost" data-prev>Back</button>
+              <button type="button" class="cta" data-next>Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="question-screen" data-screen="7" aria-labelledby="screen-title-7">
+          <div class="screen-shell">
+            <h2 id="screen-title-7">Who is riding with you most days?</h2>
+            <p class="step">Step 7 of 10</p>
+            <div class="field">
+              <label for="passengers">Passenger life</label>
+              <select id="passengers" name="passengers">
+                <option value="solo">Mostly solo</option>
+                <option value="pair">Usually 1 passenger</option>
+                <option value="family">Family / friends often</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="lifestyle">Weekend personality</label>
+              <select id="lifestyle" name="lifestyle">
+                <option value="city">City plans + errands</option>
+                <option value="roadtrip">Road trips often</option>
+                <option value="outdoors">Camping / gear / outdoors</option>
+              </select>
+            </div>
+            <div class="nav-row">
+              <button type="button" class="cta ghost" data-prev>Back</button>
+              <button type="button" class="cta" data-next>Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="question-screen" data-screen="8" aria-labelledby="screen-title-8">
+          <div class="screen-shell">
+            <h2 id="screen-title-8">What romance style do you want?</h2>
+            <p class="step">Step 8 of 10</p>
+            <div class="field">
+              <label for="vibe">Relationship vibe</label>
+              <select id="vibe" name="vibe">
+                <option value="comfort">Soft and comfy</option>
+                <option value="adventure">Road-trip chaos</option>
+                <option value="clean">Clean and modern</option>
+                <option value="sporty">Flirty and fast</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="musicEnergy">Music and tech mood</label>
+              <select id="musicEnergy" name="musicEnergy">
+                <option value="basic">Simple is fine</option>
+                <option value="balanced">Good audio + phone support</option>
+                <option value="premium">I need premium cabin vibes</option>
+              </select>
+            </div>
+            <div class="nav-row">
+              <button type="button" class="cta ghost" data-prev>Back</button>
+              <button type="button" class="cta" data-next>Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="question-screen" data-screen="9" aria-labelledby="screen-title-9">
+          <div class="screen-shell">
+            <h2 id="screen-title-9">How strict should we be with mileage?</h2>
+            <p class="step">Step 9 of 10</p>
+            <div class="field">
+              <label for="mileageComfort">Mileage comfort zone</label>
+              <select id="mileageComfort" name="mileageComfort">
+                <option value="low">Under 60k only</option>
+                <option value="mid" selected>Under 85k preferred</option>
+                <option value="high">Higher mileage is okay</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="ageComfort">Model year comfort</label>
+              <select id="ageComfort" name="ageComfort">
+                <option value="newer">Mostly 2019+</option>
+                <option value="balanced" selected>2017+ is fine</option>
+                <option value="older">Older gems welcome</option>
+              </select>
+            </div>
+            <div class="nav-row">
+              <button type="button" class="cta ghost" data-prev>Back</button>
+              <button type="button" class="cta" data-next>Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="question-screen" data-screen="10" aria-labelledby="screen-title-10">
+          <div class="screen-shell">
+            <h2 id="screen-title-10">Ready for your future car reveal?</h2>
+            <p class="step">Step 10 of 10</p>
+            <p class="subhead">Tap the button and your AI car matchmaker will pick your exact best fit.</p>
+            <div class="nav-row">
+              <button type="button" class="cta ghost" data-prev>Back</button>
+              <button type="submit" class="cta">Find my car soulmate</button>
+            </div>
+          </div>
+        </section>
+
+        <div class="progress-wrap" aria-hidden="true">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+      </form>
+
+      <section id="result" class="result-screen hidden" aria-live="polite">
+        <div class="screen-shell">
+          <p class="eyebrow">Match Complete</p>
+          <h2>Your match is in love with you</h2>
+          <article id="match-card" class="match-card"></article>
+          <div class="result-actions">
+            <button id="show-top-three" class="cta secondary" type="button">Show top 3 matches</button>
+            <button id="play-again" class="cta ghost" type="button">Play again</button>
+          </div>
+          <div id="top-three" class="top-three hidden"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
